@@ -1,0 +1,92 @@
+html {
+    // To make sure user browser setting for font size is respected.
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-size: var(--wp--custom--text--step-0);
+    font-family: var(--wp--custom--font--sans);
+    line-height: var(--wp--custom--line-height--text);
+    color: var(--wp--custom--color--grey--900);
+    overflow-wrap: break-word;
+}
+
+body {
+    background-color: var(--wp--custom--color--grey--100);
+}
+
+a {
+    color: var(--wp--custom--color--blue);
+    text-underline-position: under;
+    transition: all var(--wp--custom--transition--3);
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: var(--wp--custom--color--blue);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--wp--custom--color--grey--1000);
+    margin: var(--space-m) 0 0 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+// Note that classes .h#{$i} and .has-h-#{$i}-font-size can be found in 07-utilities/_font-sizes.scss file.
+// This is because order and hierarchy of CSS rules.
+// We want to make sure utility classes overwrite font-size even if something have been changed for example in modules.
+h1,
+.h1 {
+    font-size: var(--wp--custom--text--step-6);
+    line-height: var(--wp--custom--line-height--heading);
+}
+
+h2,
+.h2 {
+    font-size: var(--wp--custom--text--step-3);
+    line-height: var(--wp--custom--line-height--heading);
+}
+
+h3,
+.h3 {
+    font-size: var(--wp--custom--text--step-2);
+    line-height: var(--wp--custom--line-height--heading);
+}
+
+h4,
+.h4 {
+    font-size: var(--wp--custom--text--step-1);
+}
+
+h5,
+.h5 {
+    font-size: var(--wp--custom--text--step-0);
+}
+
+h6,
+.h6 {
+    font-size: var(--wp--custom--text--step-0);
+}

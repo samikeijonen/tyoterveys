@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "meomblocks/columns",
+	"title": "Columns",
+	"category": "meomblocks",
+	"icon": "columns",
+	"description": "Use columns for content",
+	"keywords": [ "columns", "column", "block" ],
+	"textdomain": "meomblocks",
+	"attributes": {
+		"columnCount": {
+			"type": "string",
+			"default": "2"
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"text": false
+		}
+	}
+}

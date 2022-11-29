@@ -1,0 +1,5 @@
+// Base focus in it's own file because we probably don't want it in the editor.
+:focus {
+    outline: 2px solid var(--wp--custom--color--grey--900);
+    outline-offset: 2px;
+}

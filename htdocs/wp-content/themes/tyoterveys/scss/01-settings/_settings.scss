@@ -1,0 +1,40 @@
+// Typography settings.
+/* @link https://utopia.fyi/type/calculator/?c=320,16,1.067,1420,20,1.25,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
+// Added in theme.json.
+
+// Spacing settings.
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1420,20,1.25,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,xs-m|s-l|s-xl */
+// Replaced word "step" with "space".
+:root {
+    --space-3xs: clamp(0.25rem, calc(0.23rem + 0.09vw), 0.31rem);
+    --space-2xs: clamp(0.5rem, calc(0.46rem + 0.18vw), 0.63rem);
+    --space-xs: clamp(0.75rem, calc(0.7rem + 0.27vw), 0.94rem);
+    --space-s: clamp(1rem, calc(0.93rem + 0.36vw), 1.25rem);
+    --space-m: clamp(1.5rem, calc(1.39rem + 0.55vw), 1.88rem);
+    --space-l: clamp(2rem, calc(1.85rem + 0.73vw), 2.5rem);
+    --space-xl: clamp(3rem, calc(2.78rem + 1.09vw), 3.75rem);
+    --space-2xl: clamp(4rem, calc(3.71rem + 1.45vw), 5rem);
+    --space-3xl: clamp(6rem, calc(5.56rem + 2.18vw), 7.5rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, calc(0.14rem + 0.55vw), 0.63rem);
+    --space-2xs-xs: clamp(0.5rem, calc(0.37rem + 0.64vw), 0.94rem);
+    --space-xs-s: clamp(0.75rem, calc(0.6rem + 0.73vw), 1.25rem);
+    --space-s-m: clamp(1rem, calc(0.75rem + 1.27vw), 1.88rem);
+    --space-m-l: clamp(1.5rem, calc(1.21rem + 1.45vw), 2.5rem);
+    --space-l-xl: clamp(2rem, calc(1.49rem + 2.55vw), 3.75rem);
+    --space-xl-2xl: clamp(3rem, calc(2.42rem + 2.91vw), 5rem);
+    --space-2xl-3xl: clamp(4rem, calc(2.98rem + 5.09vw), 7.5rem);
+
+    /* Custom pairs */
+    --space-xs-m: clamp(0.75rem, calc(0.42rem + 1.64vw), 1.88rem);
+    --space-s-l: clamp(1rem, calc(0.56rem + 2.18vw), 2.5rem);
+    --space-s-xl: clamp(1rem, calc(0.2rem + 4vw), 3.75rem);
+}
+
+$breakpoints: (
+    navigation: 75em,
+    medium-large: 56em,
+    medium: 50em,
+    small: 26em
+);

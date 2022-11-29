@@ -1,0 +1,246 @@
+// Buttons.
+.wp-block-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+
+    &.is-vertical {
+        flex-direction: column;
+    }
+
+    &.is-content-justification-left {
+        justify-content: flex-start;
+
+        &.is-vertical {
+            align-items: flex-start;
+        }
+    }
+
+    &.is-content-justification-center {
+        justify-content: center;
+
+        &.is-vertical {
+            align-items: center;
+        }
+    }
+
+    &.is-content-justification-right {
+        justify-content: flex-end;
+    }
+}
+
+.wp-block-button {
+    display: inline-block;
+}
+
+.is-style-secondary .wp-block-button__link {
+    background-color: transparent;
+    color: var(--wp--custom--color--grey--700);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+        color: var(--wp--custom--color--grey--900);
+    }
+}
+
+.is-style-white-bg .wp-block-button__link {
+    background-color: var(--wp--custom--color--neutral--white);
+    border-color: var(--wp--custom--color--neutral--white);
+    color: var(--wp--custom--color--grey--700);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--wp--custom--color--neutral--white);
+        border-color: var(--wp--custom--color--neutral--white);
+        color: var(--wp--custom--color--grey--900);
+    }
+
+    &:focus {
+        outline-color: var(--wp--custom--color--neutral--white);
+    }
+}
+
+// Core group block.
+.group.has-background {
+    padding-bottom: var(--space-2xl-3xl);
+    padding-top: var(--space-2xl-3xl);
+}
+
+.hero + .group.has-background {
+    margin-top: 0;
+}
+
+// Core columns block.
+.wp-block-columns {
+    display: flex;
+
+    // Responsiveness: Allow wrapping on mobile.
+    flex-wrap: wrap;
+
+    @include media-min(medium) {
+        flex-wrap: nowrap;
+    }
+
+    /**
+	* All Columns Alignment
+	*/
+    &.are-vertically-aligned-top {
+        align-items: flex-start;
+    }
+
+    &.are-vertically-aligned-center {
+        align-items: center;
+    }
+
+    &.are-vertically-aligned-bottom {
+        align-items: flex-end;
+    }
+
+    + .wp-block-columns {
+        margin-top: var(--space-l);
+    }
+}
+
+.wp-block-column {
+    flex-grow: 1;
+
+    // Prevent the columns from growing wider than their distributed sizes.
+    min-width: 0;
+
+    @include media(medium) {
+        // Responsiveness: Show at most one columns on mobile. This must be
+        // important since the Column assigns its own width as an inline style.
+        flex-basis: 100% !important;
+    }
+
+    // At large viewports, show all columns horizontally.
+    @include media-min(medium) {
+        // Available space should be divided equally amongst columns without an
+        // assigned width. This is achieved by assigning a flex basis that is
+        // consistent (equal), would not cause the sum total of column widths to
+        // exceed 100%, and which would cede to a column with an assigned width.
+        // The `flex-grow` allows columns to maximally and equally occupy space
+        // remaining after subtracting the space occupied by columns with
+        // explicit widths (if any exist).
+        flex-basis: 0;
+        flex-grow: 1;
+
+        // Columns with an explicitly-assigned width should maintain their
+        // `flex-basis` width and not grow.
+        &[style*="flex-basis"] {
+            flex-grow: 0;
+        }
+    }
+
+    /**
+	* Individual Column Alignment
+	*/
+    &.is-vertically-aligned-top {
+        align-self: flex-start;
+    }
+
+    &.is-vertically-aligned-center {
+        align-self: center;
+    }
+
+    &.is-vertically-aligned-bottom {
+        align-self: flex-end;
+    }
+
+    &.is-vertically-aligned-top,
+    &.is-vertically-aligned-center,
+    &.is-vertically-aligned-bottom {
+        width: 100%;
+    }
+
+    @include media-min(medium) {
+        &:not(:first-child) {
+            margin-left: var(--space-l);
+        }
+    }
+
+    @include media(medium) {
+        &:not(:first-child) {
+            margin-top: var(--space-l);
+        }
+    }
+}
+
+// Embeds.
+.wp-has-aspect-ratio .wp-block-embed__wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+
+    iframe {
+        height: 100%;
+        left: 0;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+// Core Image block.
+.wp-block-image {
+    .alignleft {
+        float: none;
+        margin-right: 0;
+        @include media-min(medium) {
+            float: left;
+            margin-right: var(--space-l);
+        }
+    }
+
+    .alignright {
+        float: none;
+        margin-left: 0;
+        @include media-min(medium) {
+            float: right;
+            margin-left: var(--space-l);
+        }
+    }
+
+    &.is-style-rounded img {
+        // We use an absolute pixel to prevent the oval shape that a value of 50% would give
+        // to rectangular images. A pill-shape is better than otherwise.
+        border-radius: 999em;
+    }
+}
+
+// Blockquote block.
+.wp-block-quote,
+blockquote {
+    border-left: 4px solid var(--wp--custom--color--blue);
+    padding-left: var(--space-m);
+
+    p {
+        font-size: var(--wp--custom--text--step-2);
+        font-weight: 500;
+    }
+
+    cite,
+    // Editor only have this class, not <cite> markup.
+    .wp-block-quote__citation {
+        color: var(--wp--custom--color--grey--600);
+        font-style: normal;
+        display: block;
+        margin-top: var(--space-s);
+    }
+}
+
+.image-and-text__content .wp-block-quote,
+.image-and-text__content blockquote {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+// Table block.
+.has-fixed-layout {
+    table-layout: fixed;
+}

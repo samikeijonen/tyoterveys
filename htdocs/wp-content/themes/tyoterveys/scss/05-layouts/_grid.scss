@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    grid-gap: var(--space-xl) var(--space-l);
+    grid-template-columns: repeat(1, 1fr);
+
+    @include media-min(medium) {
+        &.has-2-columns,
+        &.has-4-columns {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &.has-3-columns {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include media-min(medium-large) {
+        &.has-3-columns {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.has-4-columns {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: var(--space-xl) var(--space-l);
+}
+
+.has-no-gap {
+    grid-gap: 0;
+}

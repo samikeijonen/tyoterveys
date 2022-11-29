@@ -1,0 +1,273 @@
+@include media(navigation) {
+    .is-overflow-hidden.is-site-nav-opened {
+        overflow: hidden;
+    }
+}
+
+.site-nav__items {
+    @include reset-list();
+    margin-top: 0;
+
+    @include media(navigation) {
+        background-color: var(--wp--custom--color--blue);
+        display: none;
+
+        &.is-opened {
+            bottom: 0;
+            display: block;
+            left: 0;
+            overflow-x: auto;
+            padding: var(--space-3xl) var(--space-s-xl) var(--space-s);
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 100;
+        }
+    }
+
+    @include media-min(navigation) {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.site-nav__items > .menu-item {
+    position: relative;
+
+    @include media-min(navigation) {
+        margin-right: var(--space-m);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover > ul {
+            left: 0;
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+    }
+}
+
+.site-nav__items a {
+    font-size: var(--wp--custom--text--step-m-1);
+    color: var(--wp--custom--color--neutral--white);
+    padding: var(--space-xs) 0;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: var(--wp--custom--color--neutral--white);
+    }
+
+    &:focus {
+        outline-color: var(--wp--custom--color--white);
+    }
+
+    @include media(navigation) {
+        display: block;
+    }
+
+    @include media-min(navigation) {
+        padding: var(--space-xs) 0;
+    }
+
+    &:hover {
+        outline: 0;
+        text-decoration: underline;
+    }
+}
+
+.menu-item--main .is-anchor-level-0 {
+    @include media(navigation) {
+        font-size: var(--wp--custom--text--step-1);
+    }
+}
+
+.menu-item [aria-current="page"] {
+    text-decoration: underline;
+}
+
+.menu-item--social-link {
+    margin-top: var(--space-m);
+
+    @include media-min(navigation) {
+        display: none;
+    }
+}
+
+.sub-menu {
+    @include reset-list();
+
+    left: -999em;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-0.5rem);
+    transition: transform var(--wp--custom--transition--4);
+    visibility: hidden;
+
+    @include media(navigation) {
+        margin-bottom: var(--space-s);
+        margin-left: var(--space-m);
+
+        &.is-opened {
+            position: static;
+        }
+    }
+
+    @include media-min(navigation) {
+        background-color: var(--wp--custom--color--blue);
+        margin-top: 0;
+        min-width: 18rem;
+        padding: var(--space-s);
+        text-align: left;
+        top: 100%;
+        z-index: 300;
+    }
+
+    &.is-opened {
+        left: 0;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    a {
+        display: block;
+        padding: var(--space-2xs) 0;
+        text-transform: none;
+    }
+
+}
+
+.site-nav__toggle {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    color: var(--wp--custom--color--neutral--white);
+    left: var(--space-2xs);
+    line-height: 1;
+    padding: var(--space-2xs);
+    position: relative;
+    z-index: 120;
+
+    &[aria-expanded="true"] {
+        color: var(--wp--custom--color--neutral--white);
+    }
+
+    /* For some reason Firefox in WIN doesn't give good focus styles withouth this. */
+    &:focus {
+        outline: 2px solid var(--wp--custom--color--neutral--white);
+    }
+
+    @include media-min(navigation) {
+        display: none;
+    }
+}
+
+.site-nav__toggle-box {
+    display: block;
+    height: 24px;
+    position: relative;
+    width: 32px;
+}
+
+.site-nav__toggle-box-inner,
+.site-nav__toggle-box-inner::after,
+.site-nav__toggle-box-inner::before {
+    background-color: var(--wp--custom--color--neutral--white);
+    display: block;
+    height: 1px;
+    position: absolute;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: ease;
+    width: 32px;
+}
+
+.site-nav__toggle-box-inner {
+    display: block;
+    margin-top: -2px;
+    top: 50%;
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.site-nav__toggle-box-inner::after,
+.site-nav__toggle-box-inner::before {
+    content: "";
+}
+
+.site-nav__toggle-box-inner::before {
+    top: -10px;
+    transition: top 0.075s ease 0.2s, opacity 0.075s ease;
+}
+
+.site-nav__toggle-box-inner::after {
+    bottom: -10px;
+    transition: bottom 0.075s ease 0.2s, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.2s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner::before {
+    opacity: 0;
+    top: 0;
+    transition: top 0.075s ease, opacity 0.075s ease 0.2s;
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+.site-nav__sub-toggle {
+    @include media(navigation) {
+        border: 1px solid var(--wp--custom--color--neutral--white);
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+    }
+
+    background-color: transparent;
+    color: var(--wp--custom--color--neutral--white);
+    border: 0;
+    border-radius: 0;
+    display: inline-block;
+    padding: 0.25rem;
+    margin-left: 0.125rem;
+    transition: transform var(--transition-duration-md) ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+    }
+
+    &:focus {
+        outline-color: var(--wp--custom--color--neutral--white);
+    }
+
+    svg {
+        fill: currentColor;
+        pointer-events: none;
+        position: relative;
+        top: -0.0625em;
+        transition: transform var(--wp--custom--transition--3);
+        vertical-align: middle;
+    }
+}
+
+.site-nav__sub-toggle[aria-expanded="true"] {
+    svg {
+        transform: rotate(-180deg);
+    }
+}

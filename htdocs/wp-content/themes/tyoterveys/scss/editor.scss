@@ -1,0 +1,142 @@
+/*--------------------------------------------------------------
+# Settings - Global variables, config switches.
+--------------------------------------------------------------*/
+@import "01-settings/settings";
+@import "01-settings/fonts";
+
+
+/*--------------------------------------------------------------
+# Tools - Default mixins and functions.
+--------------------------------------------------------------*/
+@import "02-tools/mixin";
+
+body .editor-styles-wrapper {
+    font-size: var(--wp--custom--text--step-0);
+    font-family: var(--wp--custom--font--sans);
+    line-height: var(--wp--custom--line-height--text);
+    color: var(--wp--custom--color--grey--800);
+
+    /*--------------------------------------------------------------
+    # Elements - Unclassed HTML elements (type selectors).
+    --------------------------------------------------------------*/
+    // Let typography be the first so other can inherit from that.
+    @import "04-elements/typography";
+    @import "04-elements/button";
+    @import "04-elements/list";
+    @import "04-elements/media";
+    @import "04-elements/table";
+
+
+    /*--------------------------------------------------------------
+    # Layout - Undecorated design patterns.
+    --------------------------------------------------------------*/
+    @import "05-layouts/content-area";
+    @import "05-layouts/container";
+    @import "05-layouts/grid";
+    @import "05-layouts/icon";
+    @import "05-layouts/margins";
+
+
+    /*--------------------------------------------------------------
+    # Modules - specific UI components.
+    --------------------------------------------------------------*/
+    @import "06-modules/core-blocks";
+    @import "06-modules/hero";
+    @import "06-modules/post-item";
+    @import "06-modules/wpforms";
+
+
+    /*--------------------------------------------------------------
+    # Utilities - Helpers and overrides.
+    --------------------------------------------------------------*/
+    @import "07-utilities/alignments";
+    @import "07-utilities/cover";
+    @import "07-utilities/margins";
+}
+
+// For WP Forms.
+.editor-styles-wrapper .wpforms {
+    @import "04-elements/form";
+}
+
+// Reset content row margins, there is plenty of margin in the editor without these.
+.content-row {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container {
+    padding-left: var(--space-s-xl);
+    padding-right: var(--space-s-xl);
+}
+
+// Force centering the elements.
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: var(--wp--custom--width--container--medium);
+}
+
+// Wide width.
+.editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .alignwide {
+    max-width: var(--wp--custom--width--container-wide);
+}
+
+// Full width.
+.editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > [data-align="full"],
+.editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .alignfull {
+    margin-left: calc(var(--space-s-xl) * -1) !important;
+    margin-right: calc(var(--space-s-xl) * -1) !important;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// Reset margin for first hero.
+.is-root-container > .wp-block:first-child .hero {
+    margin-top: 0;
+}
+
+// Core adds align in the wrong wrapper.
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > [data-align="left"],
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > [data-align="right"] {
+    float: none !important;
+}
+
+.wp-block[data-align="left"] > .wp-block-image {
+    float: left;
+}
+
+.wp-block[data-align="right"] > .wp-block-image {
+    float: right;
+}
+
+// Media and buttons.
+.wp-block[data-type^="meomblocks"] .button,
+.wp-block[data-type^="meomblocks"] .block-editor-media-placeholder {
+    position: relative;
+    z-index: 50;
+}
+
+.wp-block[data-type="meomblocks/hero"] .button,
+.wp-block[data-type="meomblocks/cover"] .button {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+// Some select-fields in the sidebar are height: 100%, I don't know why.
+.components-flex.components-select-control {
+    height: auto;
+}
+
+// Fix ul and ol
+.editor-styles-wrapper.editor-styles-wrapper ul,
+.editor-styles-wrapper.editor-styles-wrapper ol {
+    box-sizing: border-box;
+}
+
+.has-child-selected {
+    border: 1px dashed;
+    padding: 0.5rem;
+}

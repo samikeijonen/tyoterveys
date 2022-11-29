@@ -1,0 +1,42 @@
+.pagination {
+    text-align: center;
+}
+
+.nav-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    justify-content: center;
+}
+
+.page-numbers {
+    background-color: var(--wp--custom--color--blue);
+    border-radius: 0.25rem;
+    color: var(--wp--custom--color--neutral--white);
+    display: block;
+    padding: var(--space-2xs) var(--space-xs);
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--wp--custom--color--blue);
+        color: var(--wp--custom--color--neutral--white);
+    }
+
+    &.prev,
+    &.next {
+        width: auto;
+    }
+
+    &.prev svg {
+        transform: rotate(180deg);
+    }
+
+    &.current {
+        background-color: var(--wp--custom--color--blue);
+    }
+}

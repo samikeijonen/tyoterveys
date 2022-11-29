@@ -1,0 +1,13 @@
+.contact {
+    background-color: var(--wp--custom--color--grey--100);
+    padding-bottom: var(--space-2xl-3xl);
+    padding-top: var(--space-2xl-3xl);
+
+    a {
+        color: var(--wp--custom--color--blue);
+    }
+}
+
+.contact__container {
+    max-width: var(--wp--custom--width--container-medium);
+}

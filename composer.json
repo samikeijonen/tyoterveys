@@ -1,0 +1,77 @@
+{
+  "name": "meom/kala-stack",
+  "type": "project",
+  "license": "MIT",
+  "description": "MEOM WordPress Project Template - Based on Seravo WordPress",
+  "homepage": "https://seravo.com/",
+  "authors": [
+    {
+      "name": "Janne Leppänen",
+      "email": "janne.leppanen@meom.fi",
+      "homepage": "https://github.com/janneleppanen"
+    }
+  ],
+  "keywords": ["wordpress", "composer", "wp", "wp-palvelu", "seravo"],
+  "config": {
+    "preferred-install": "dist"
+  },
+  "autoload": {
+    "psr-0": { "WordPress\\Installer": "scripts" }
+  },
+  "scripts": {
+    "post-install-cmd": ["WordPress\\Installer::symlinkWPContent"],
+    "post-update-cmd": ["WordPress\\Installer::symlinkWPContent"]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "johnpbloch/wordpress-core-installer": "^2.0",
+    "johnpbloch/wordpress-core": "^6.0",
+    "composer/installers": "^1.0",
+    "koodimonni/composer-dropin-installer": "^1.0",
+    "roots/bedrock-autoloader": "^1.0",
+    "vlucas/phpdotenv": "^5.0",
+
+    "koodimonni-language/fi": "*",
+    "koodimonni-language/sv_se": "*",
+
+    "seravo/seravo-plugin": "*",
+
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/so-clean-up-wp-seo": "*",
+    "wpackagist-plugin/regenerate-thumbnails": "*",
+    "wpackagist-plugin/kraken-image-optimizer": "*",
+    "meom/meom-dodo": "^1.0",
+    "meom/meom-3rd-party-scripts": "*"
+  },
+  "require-dev": {
+    "meom/phpcs-composer": "dev-main"
+  },
+  "extra": {
+    "installer-paths": {
+      "htdocs/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "htdocs/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "htdocs/wp-content/themes/{$name}": ["type:wordpress-theme"]
+    },
+    "dropin-paths": {
+      "htdocs/wp-content/languages/": ["vendor:koodimonni-language"],
+      "htdocs/wp-content/languages/plugins/": [
+        "vendor:koodimonni-plugin-language"
+      ],
+      "htdocs/wp-content/languages/themes/": [
+        "vendor:koodimonni-theme-language"
+      ],
+      ".": ["type:seravo-wordpress-dropin"]
+    },
+    "wordpress-install-dir": "htdocs/wordpress"
+  }
+}

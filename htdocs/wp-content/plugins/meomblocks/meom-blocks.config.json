@@ -1,0 +1,15 @@
+{
+    "category": {
+        "name": "MEOM-lohkot",
+        "slug": "meomblocks"
+    },
+    "blocks": [
+        {
+            "slug": "columns"
+        },
+        {
+            "slug": "column"
+        }
+    ],
+    "acf_blocks": {}
+}

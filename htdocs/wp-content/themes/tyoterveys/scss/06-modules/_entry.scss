@@ -1,0 +1,35 @@
+.entry__meta {
+    color: var(--wp--custom--color--grey--600);
+}
+
+.entry__terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: center;
+
+    > li {
+        display: flex;
+    }
+
+    a {
+        background-color: var(--wp--custom--color--grey-100);
+        border-radius: 0.125rem;
+        color: var(--wp--custom--color--grey--900);
+        font-size: var(--wp--custom--text--step-m-1);
+        padding: var(--space-2xs) var(--space-xs);
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &[aria-current="page"] {
+            background-color: var(--wp--custom--color--blue);
+            color: var(--wp--custom--color--neutral--white);
+        }
+    }
+}
+
+.entry__terms--category {
+    justify-content: flex-start;
+}

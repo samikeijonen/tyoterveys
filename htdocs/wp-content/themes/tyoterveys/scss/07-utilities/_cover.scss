@@ -1,0 +1,58 @@
+.cover-img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.has-img-position-top .cover-img {
+    object-position: top center;
+}
+
+.cover-bg::before {
+    background-color: var(--wp--custom--color--blue);
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+// Use 16:11 ratio on image. Use it on figure element.
+.background-image {
+    overflow: hidden;
+    position: relative;
+    padding-top: 68.75%; // 16:11
+    width: 100%;
+
+    img {
+        @include background-image();
+        transition: transform var(--wp--custom--transition--3) linear;
+    }
+}
+
+.type-professional .background-image img {
+    filter: grayscale(0.75);
+
+}
+
+.post-item:hover img,
+.post-item:focus-within img {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.background-image--square,
+.type-professional .background-image {
+    padding-top: 100%;
+}

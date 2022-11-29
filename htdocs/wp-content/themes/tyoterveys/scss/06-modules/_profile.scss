@@ -1,0 +1,15 @@
+.profile {
+    align-items: center;
+    display: flex;
+    gap: var(--space-s);
+    justify-content: center;
+}
+
+.profile__img img {
+    border-radius: 50%;
+    max-width: 4rem;
+}
+
+.profile__content {
+    font-size: var(--wp--custom--text--step-m-1);
+}

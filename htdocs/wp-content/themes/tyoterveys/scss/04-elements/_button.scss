@@ -1,0 +1,32 @@
+.btn,
+.wp-block-button__link,
+.wp-block-button__link:visited,
+input[type="submit"],
+.wpforms-container button {
+    background-color: var(--wp--custom--color--blue);
+    border: 0;
+    border-radius: 2px;
+    color: var(--wp--custom--color--neutral--white);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: var(--space-xs) var(--space-s);
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--wp--custom--color--blue);
+        color: var(--wp--custom--color--neutral--white);
+
+        svg {
+            transform: translateX(var(--space-3xs));
+        }
+    }
+
+    svg {
+        margin-left: var(--space-2xs);
+        transition: transform var(--wp--custom--transition--3);
+    }
+}

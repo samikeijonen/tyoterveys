@@ -1,0 +1,92 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "custom": {
+            "color": {
+                "blue": "#3559c7",
+                "grey": {
+                    "100": "hsl(40, 23%, 97%)",
+                    "200": "hsl(43, 13%, 90%)",
+                    "300": "hsl(40, 15%, 80%)",
+                    "400": "hsl(39, 11%, 69%)",
+                    "500": "hsl(41, 8%, 61%)",
+                    "600": "hsl(41, 8%, 44%)",
+                    "700": "hsl(41, 9%, 35%)",
+                    "800": "hsl(37, 11%, 28%)",
+                    "900": "hsl(40, 13%, 23%)",
+                    "1000": "hsl(42, 15%, 13%)"
+                },
+                "neutral": {
+                    "white": "#fff",
+                    "black": "#000"
+                }
+            },
+            "text": {
+                "step-m1": "clamp(0.94rem, calc(0.92rem + 0.09vw), 1.00rem)",
+                "step-0": "clamp(1.00rem, calc(0.93rem + 0.36vw), 1.25rem);",
+                "step-1": "clamp(1.07rem, calc(0.92rem + 0.72vw), 1.56rem)",
+                "step-2": "clamp(1.14rem, calc(0.90rem + 1.18vw), 1.95rem)",
+                "step-3": "clamp(1.22rem, calc(0.86rem + 1.78vw), 2.44rem)",
+                "step-4": "clamp(1.30rem, calc(0.79rem + 2.55vw), 3.05rem)",
+                "step-5": "clamp(1.38rem, calc(0.68rem + 3.54vw), 3.82rem)",
+                "step-6": "clamp(1.48rem, calc(0.52rem + 4.79vw), 4.77rem)"
+            },
+            "line-height": {
+                "text": "1.5",
+                "heading": "1.2"
+            },
+			"font": {
+				"sans": "IBM Plex Sans, sans;"
+			},
+            "width": {
+                "site-max": "125rem",
+                "container": "87.5rem",
+                "container-wide": "87.5rem",
+                "container-medium": "46rem",
+                "container-small": "27.5rem"
+            },
+            "transition": {
+                "3": "0.3s",
+                "4": "0.4s"
+            }
+        },
+        "border": {
+            "color": false,
+            "radius": false,
+            "style": false,
+            "width": false
+        },
+        "color": {
+            "custom": false,
+            "customGradient": false,
+            "defaultPalette": false,
+            "defaultGradients": false,
+            "duotone": [],
+            "gradients": [],
+            "link": false,
+            "palette": []
+        },
+        "layout": {
+            "contentSize": "var(--wp--custom--width--container-medium)",
+            "wideSize": "var(--wp--custom--width--container-wide)"
+        },
+        "spacing": {
+            "margin": false,
+            "padding": false,
+            "units": []
+        },
+        "typography": {
+            "customFontSize": false,
+            "fontStyle": false,
+            "fontWeight": false,
+            "lineHeight": false,
+            "textDecoration": false,
+            "textTransform": false,
+            "dropCap": false,
+            "fontFamilies": [],
+            "fontSizes": []
+        },
+		"blocks": {}
+    }
+}

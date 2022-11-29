@@ -1,0 +1,71 @@
+.site-footer {
+    background-color: var(--wp--custom--color--blue);
+    color: var(--wp--custom--color--neutral--white);
+    overflow: hidden;
+    padding-bottom: var(--space-2xl-3xl);
+    padding-top: var(--space-2xl-3xl);
+    position: relative;
+
+    @include media-min(navigation) {
+        min-height: 50rem;
+    }
+}
+
+.site-footer__svg svg {
+    bottom: 0;
+    left: 25%;
+    height: 150%;
+    object-fit: cover;
+    opacity: 0.05;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    z-index: 0;
+
+    @include media(navigation) {
+        display: none;
+    }
+}
+
+.site-footer__container {
+    position: relative;
+    z-index: 10;
+}
+
+.site-footer__text {
+    font-size: var(--wp--custom--text--step-m-1);
+}
+
+.site-footer__text h2,
+.site-footer__text a {
+    color: var(--wp--custom--color--neutral--white);
+}
+
+.site-footer__text a:hover,
+.site-footer__text a:active,
+.site-footer__text a:focus {
+    color: var(--wp--custom--color--blue);
+}
+
+.site-footer__text h2 {
+    font-size: var(--wp--custom--text--step-0);
+}
+
+.site-footer__text ul {
+    @include reset-list();
+}
+
+.site-footer__text ul a {
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.site-footer__wave {
+    position: relative;
+    top: 1rem;
+}

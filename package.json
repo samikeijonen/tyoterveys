@@ -1,0 +1,45 @@
+{
+  "name": "kala-stack",
+  "version": "1.0.0",
+  "description": "kala-stack project",
+  "author": "MEOM Oy",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "editor"
+  ],
+  "homepage": "https://bitbucket.org/meom/kala-stack",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wordpress/wordpress.git"
+  },
+  "bugs": "https://bitbucket.org/meom/kala-stack/issues?status=new&status=open",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.9.0"
+  },
+  "dependencies": {
+    "@meom/navigation": "^1.0.5",
+    "classnames": "^2.3.1",
+    "handorgel": "^0.5.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@meom/scripts": "^4.0.0"
+  },
+  "scripts": {
+    "build": "wp-scripts build --webpack-no-externals",
+    "check-engines": "wp-scripts check-engines",
+    "format:js": "wp-scripts format 'htdocs/wp-content/themes/kala/js/**/*.js'",
+    "format-blocks:js": "wp-scripts format 'htdocs/wp-content/plugins/meomblocks/**/*.js'",
+    "lint": "npm run lint:css && npm run lint-blocks:css && npm run lint:js && npm run lint-blocks:js",
+    "lint:css": "wp-scripts lint-style 'htdocs/wp-content/themes/kala/scss/**/*.scss'",
+    "lint-blocks:css": "wp-scripts lint-style 'htdocs/wp-content/plugins/meomblocks/blocks/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'htdocs/wp-content/themes/kala/js/**/*.js'",
+    "lint-blocks:js": "wp-scripts lint-js 'htdocs/wp-content/plugins/meomblocks/**/*.js'",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "start": "wp-scripts start --webpack-no-externals",
+    "test": "scripts/run-tests"
+  }
+}

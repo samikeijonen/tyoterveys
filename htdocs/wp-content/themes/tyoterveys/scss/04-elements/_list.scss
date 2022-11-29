@@ -1,0 +1,16 @@
+.content-area > ul,
+.content-area > ol,
+.wp-block-column > ul,
+.wp-block-column > ol,
+.image-and-text__content > ul,
+.image-and-text__content > ol {
+    padding-left: var(--space-m);
+
+    > li {
+        margin-top: var(--space-3xs);
+    }
+
+    > li:first-child {
+        margin-top: 0;
+    }
+}

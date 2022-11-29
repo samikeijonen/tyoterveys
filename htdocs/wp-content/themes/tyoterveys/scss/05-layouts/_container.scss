@@ -1,0 +1,29 @@
+// Containers.
+.container { // Own container class.
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Side padding.
+.x-padding,
+.has-background.alignfull,
+[data-align="full"] .has-background {
+    padding-left: var(--space-s-xl);
+    padding-right: var(--space-s-xl);
+}
+
+.alignregular {
+    max-width: var(--wp--custom--width--container-medium);
+}
+
+.alignwide,
+.alignfull > .wp-block-columns,
+[data-align="full"] .wp-block-columns {
+    max-width: var(--wp--custom--width--container-wide);
+}
+
+.alignfull {
+    margin-left: calc(var(--space-s-xl) * -1);
+    margin-right: calc(var(--space-s-xl) * -1);
+    max-width: none;
+}

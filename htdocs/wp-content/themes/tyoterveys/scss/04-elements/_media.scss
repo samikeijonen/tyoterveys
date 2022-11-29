@@ -1,0 +1,21 @@
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+/* Make sure images are scaled correctly. */
+img {
+    border-radius: 0.25rem;
+    height: auto;
+    max-width: 100%;
+    /* Removes the whitespace under img, safer than `display: block;`. */
+    vertical-align: middle;
+}
+
+figcaption {
+    color: var(--wp--custom--color--grey--600);
+    margin-top: var(--space-2xs);
+    text-align: center;
+}
