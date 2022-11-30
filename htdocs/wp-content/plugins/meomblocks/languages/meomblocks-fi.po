@@ -8,8 +8,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-09-23T15:54:31+03:00\n"
-"PO-Revision-Date: 2021-09-23 16:02+0300\n"
+"POT-Creation-Date: 2021-06-15T22:30:48+03:00\n"
+"PO-Revision-Date: 2021-06-29 15:38+0300\n"
 "X-Generator: Poedit 3.0\n"
 "X-Domain: meomblocks\n"
 "Last-Translator: \n"
@@ -18,15 +18,35 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "MEOM Blocks"
-msgstr "Kustomoidut lohkot"
+msgstr "MEOM lohkot"
 
 #. Description of the plugin
 msgid "Custom Gutenberg Blocks"
-msgstr "Kustomoidut lohkot"
+msgstr "Gutenberg lohkot"
 
 #. Author of the plugin
 msgid "MEOM"
 msgstr "MEOM"
+
+#: blocks/example/block.json
+msgctxt "block title"
+msgid "Example"
+msgstr "Esimerkki"
+
+#: blocks/example/block.json
+msgctxt "block description"
+msgid "Meomblocks example."
+msgstr "MEOM-lohko esimerkki."
+
+#: blocks/example/block.json
+msgctxt "block keyword"
+msgid "example"
+msgstr "esimerkki"
+
+#: blocks/example/block.json
+msgctxt "block keyword"
+msgid "message"
+msgstr "viesti"
 
 #: blocks/hero/block.json
 msgctxt "block title"
@@ -46,44 +66,4 @@ msgstr "hero"
 #: blocks/hero/block.json
 msgctxt "block keyword"
 msgid "header"
-msgstr "yläpalkki"
-
-#: blocks/image-and-text/block.json
-msgctxt "block title"
-msgid "Image and text"
-msgstr "Kuva ja teksti"
-
-#: blocks/image-and-text/block.json
-msgctxt "block description"
-msgid "Image and text block."
-msgstr "Kuva ja teksti -lohko."
-
-#: blocks/image-and-text/block.json
-msgctxt "block keyword"
-msgid "image"
-msgstr "kuva"
-
-#: blocks/image-and-text/block.json
-msgctxt "block keyword"
-msgid "text"
-msgstr "teksti"
-
-#: blocks/latest-posts/block.json
-msgctxt "block title"
-msgid "Latest posts"
-msgstr "Viimeisimmät uutiset"
-
-#: blocks/latest-posts/block.json
-msgctxt "block keyword"
-msgid "latest"
-msgstr "viimeisimmät"
-
-#: blocks/latest-posts/block.json
-msgctxt "block keyword"
-msgid "posts"
-msgstr "artikkelit"
-
-#: blocks/latest-posts/block.json
-msgctxt "block keyword"
-msgid "meom"
-msgstr ""
+msgstr "header"

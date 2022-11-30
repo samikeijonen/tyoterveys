@@ -1,0 +1,99 @@
+// Default top margin between elements in the content.
+.content-area > * + *,
+.top-margin > * + *,
+.column > * + *,
+.group > * + *,
+.wp-block-quote > * + *,
+// For editor.
+.is-root-container > * + * {
+    margin-bottom: 0;
+    margin-top: var(--space-l);
+}
+
+.top-margin--2xl > * + * {
+    margin-top: var(--space-2xl);
+}
+
+.top-margin--xl > * + * {
+    margin-top: var(--space-xl);
+}
+
+.top-margin--m > * + * {
+    margin-top: var(--space-m);
+}
+
+.top-margin--s > * + *,
+.gform_fields > * + *,
+.gform_wrapper form > * + * {
+    margin-top: var(--space-s);
+}
+
+.top-margin--xs > * + *,
+.has-small-font-size + h2,
+.has-small-font-size + h3 {
+    margin-top: var(--space-xs);
+}
+
+.content-area > {
+    :first-child {
+        margin-top: var(--space-3xl);
+    }
+
+    :last-child {
+        margin-bottom: var(--space-4xl-5xl);
+    }
+}
+
+.content-area > h2,
+.content-area > h3,
+.content-area > h4,
+// For editor.
+.is-root-container > h2,
+.is-root-container > h3,
+.is-root-container > h4 {
+    margin-top: var(--space-3xl);
+}
+
+// Helper class for unifying space around modules
+.content-area > .module-top-margin,
+.content-area > .wp-block-quote,
+.content-area > .wp-block-embed,
+.is-root-container > .module-top-margin,
+.is-root-container > .wp-block-quote,
+.is-root-container > .wp-block-embed,
+// Next element top margin inside the content area.
+.content-area > .module-top-margin + *,
+.content-area > .wp-block-quote + *,
+.content-area > .wp-block-embed + *,
+.is-root-container > .module-top-margin + *,
+.is-root-container > .wp-block-quote + *,
+.is-root-container > .wp-block-embed + * {
+    margin-top: var(--space-4xl-5xl);
+}
+
+.content-area > .wp-block-image,
+.content-area > .wp-block-image + *,
+.entry-image + .entry-title {
+    margin-top: var(--space-2xl);
+}
+
+.group > .module-top-margin,
+.group > .module-top-margin + *,
+.taxonomy-nav.module-top-margin + * {
+    margin-top: var(--space-2xl-3xl);
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.has-background {
+    padding: var(--space-5xl) var(--space-l-5xl);
+}
+
+/* Paddings. */
+.x-padding {
+    padding-left: var(--space-l-5xl);
+    padding-right: var(--space-l-5xl);
+}

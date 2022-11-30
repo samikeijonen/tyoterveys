@@ -1,0 +1,16 @@
+.post-item {
+    font-size: var(--step--1);
+}
+
+.post-item__image {
+    margin: 0;
+}
+
+.post-item__title a {
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+        text-underline-position: auto;
+    }
+}

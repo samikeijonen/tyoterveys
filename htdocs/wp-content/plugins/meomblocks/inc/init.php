@@ -20,7 +20,7 @@ function block_category( $categories ) {
     return array_merge(
         array(
             array(
-                'title' => $config['category']['name'],
+                'title' => __( $config['category']['name'], 'meomblocks' ),
                 'slug'  => $config['category']['slug'],
             ),
         ),
@@ -119,17 +119,17 @@ function meomblocks_register_native_block() {
 
         // Register block.
         register_block_type(
-            // Path to the blocks .json file.
+			// Path to the blocks .json file.
             __DIR__ . '/../blocks/' . $block['slug'],
             [
-                'editor_style'    => 'meomblocks-' . $block['slug'] . '-editor',
+				'editor_style'    => 'meomblocks-' . $block['slug'] . '-editor',
                 'render_callback' => function( $attributes, $content = null ) use ( $block ) {
                     // This will load CSS and JS only when block is present in the front-end.
                     wp_enqueue_style( 'meomblocks-' . $block['slug'] );
                     wp_enqueue_script( 'meomblocks-js-' . $block['slug'] );
-                    return render_native_block( $block['slug'], $attributes, $content );
+					return render_native_block( $block['slug'], $attributes, $content );
                 },
-            ]
+			]
         );
     }
 
@@ -169,7 +169,7 @@ function meomblocks_register_acf_block() {
                         array( 'theme-styles' ),
                         filemtime( plugin_dir_path( __FILE__ ) . $style_path )
                     );
-                }
+				}
                 // Register editor styles.
                 if ( is_admin() && file_exists( plugin_dir_path( __FILE__ ) . $editor_style_path ) ) {
                     wp_enqueue_style(

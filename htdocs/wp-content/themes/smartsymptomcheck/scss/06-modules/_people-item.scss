@@ -1,0 +1,24 @@
+.people-item {
+    font-size: var(--step--1);
+}
+
+.people-item__image {
+    margin: 0;
+}
+
+.people-item__job,
+.people-item__linkedin a {
+    color: var(--color-primary);
+    font-size: var(--step--2);
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+}
+
+.people-item__title {
+    margin-top: var(--space-2xs);
+}
+
+.people-item__email {
+    margin-top: 0;
+}

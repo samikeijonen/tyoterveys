@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "meomblocks/grid-column",
+	"parent": ["meomblocks/grid"],
+	"title": "Grid column",
+	"category": "meomblocks",
+	"icon": "block-default",
+	"description": "Column content.",
+	"keywords": [ "column", "block" ],
+	"textdomain": "meomblocks",
+	"supports": {
+		"align": [],
+		"anchor": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"text": false
+		}
+	}
+}

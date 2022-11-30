@@ -1,0 +1,41 @@
+.entry-meta {
+    font-size: var(--step--2);
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+.category-impact .entry-meta a,
+.category-impact .entry-meta {
+    color: var(--color-dark-grey-green);
+}
+
+.category-innovation .entry-meta a,
+.category-innovation .entry-meta {
+    color: var(--color-deep-canary);
+}
+
+.category-people .entry-meta a,
+.category-people .entry-meta {
+    color: var(--color-jade-green);
+}
+
+.category-process .entry-meta a,
+.category-process .entry-meta {
+    color: var(--color-primary);
+}
+
+.category-product .entry-meta a,
+.category-product .entry-meta {
+    color: var(--color-colorful-tangerine);
+}

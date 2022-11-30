@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "meomblocks/group",
+	"title": "Group",
+	"category": "meomblocks",
+	"icon": "block-default",
+	"description": "Group other blocks inside group.",
+	"keywords": [ "group", "blocks" ],
+	"textdomain": "meomblocks",
+	"supports": {
+		"anchor": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"text": false
+		}
+	}
+}

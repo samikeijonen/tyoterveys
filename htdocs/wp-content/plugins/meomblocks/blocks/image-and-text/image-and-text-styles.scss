@@ -1,0 +1,25 @@
+@import "../../style-imports/theme-imports";
+
+.image-and-text__container {
+    align-items: center;
+    gap: var(--space-3xl);
+}
+
+.image-and-text__content {
+    max-width: 60ch;
+}
+
+.image-and-text__image {
+    margin: 0;
+}
+
+.has-no-image-border .image-and-text__image {
+    border: 0;
+}
+
+
+.image-and-text--position-right .image-and-text__image {
+    @include media-min(medium-large) {
+        order: 2;
+    }
+}

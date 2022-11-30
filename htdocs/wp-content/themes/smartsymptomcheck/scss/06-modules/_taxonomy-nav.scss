@@ -1,0 +1,21 @@
+.taxonomy-nav__items {
+    @include reset-list();
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-l);
+
+    a {
+        font-size: var(--step-1);
+        font-weight: 700;
+        letter-spacing: var(--letter-spacing);
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &[aria-current] {
+            text-decoration: underline;
+        }
+    }
+}

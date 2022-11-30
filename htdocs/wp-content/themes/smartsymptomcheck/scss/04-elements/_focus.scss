@@ -1,0 +1,13 @@
+// Base focus styles
+:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+// If :focus-visible is supported, let's remove focus styles, looks like it still supports WIN high contrast mode.
+// This will remove focus styles for "mouse clicks". Browsers heuristics might fall short.
+// And this is assumption that mouse user won't benefit from focus styles at some cases.
+// https://hacks.mozilla.org/2019/06/indicating-focus-to-improve-accessibility/
+:focus:not(:focus-visible) {
+    outline: none;
+}

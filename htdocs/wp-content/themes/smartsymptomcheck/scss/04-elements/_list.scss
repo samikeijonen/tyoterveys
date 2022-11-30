@@ -1,0 +1,12 @@
+.content-area > ul,
+.content-area > ol {
+    padding-left: 2.5rem;
+
+    > li {
+        margin-top: 0.25rem;
+    }
+
+    > li:first-child {
+        margin-top: 0;
+    }
+}
