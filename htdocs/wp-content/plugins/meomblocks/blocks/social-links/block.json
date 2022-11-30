@@ -1,0 +1,8 @@
+{
+    "apiVersion": 2,
+    "name": "meomblocks/social-links",
+    "title": "Social links",
+    "category": "meomblocks",
+    "icon": "share",
+    "keywords": ["social", "links"]
+}

@@ -1,0 +1,12 @@
+// Content area generates automatic medium-container for all not-full-width element.
+// Use class 'alignfull' if you want to skip this automation in an element.
+// Gutenberg content should be added inside this class.
+.content-area {
+    position: relative;
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;
+        width: var(--width-regular);
+    }
+}

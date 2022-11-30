@@ -8,7 +8,7 @@ const ImageSelect = (props) => {
     const imageUrl = image && image.url;
 
     return (
-        <div>
+        <>
             {!imageId ? (
                 <MediaPlaceholder
                     onSelect={({ id, url }) => {
@@ -21,14 +21,14 @@ const ImageSelect = (props) => {
                     <img className={classes} src={imageUrl} alt="" />
 
                     <Button
-                        className="button button-large"
+                        className="button button-large meom-media-button"
                         onClick={() => onChange(null)}
                     >
-                        {__('Poista kuva', 'meomblocks')}
+                        {__('Poista kuva', 'meom-gutenberg')}
                     </Button>
                 </>
             )}
-        </div>
+        </>
     );
 };
 

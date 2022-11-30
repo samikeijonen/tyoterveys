@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "meomblocks/grid",
+	"title": "Grid columns",
+	"category": "meomblocks",
+	"icon": "columns",
+	"description": "Add content in columns.",
+	"keywords": [ "columns", "column", "grid" ],
+	"textdomain": "meomblocks",
+	"attributes": {
+		"columnCount": {
+			"type": "string",
+			"default": "2"
+		},
+		"hasSmallerSpacing": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"html": false
+	}
+}

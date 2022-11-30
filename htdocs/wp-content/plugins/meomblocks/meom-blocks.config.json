@@ -5,11 +5,26 @@
     },
     "blocks": [
         {
-            "slug": "columns"
+            "slug": "hero"
         },
         {
-            "slug": "column"
+            "slug": "image-and-text"
+        },
+        {
+            "slug": "grid"
+        },
+        {
+            "slug": "grid-column"
+        },
+        {
+            "slug": "article-lifts"
+        },
+        {
+            "slug": "group"
+        },
+        {
+            "slug": "social-links"
         }
     ],
-    "acf_blocks": {}
+    "acf_blocks" : {}
 }

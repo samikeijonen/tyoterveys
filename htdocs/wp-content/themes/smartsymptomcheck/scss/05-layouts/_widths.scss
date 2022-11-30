@@ -1,0 +1,43 @@
+// Widths.
+.width-regular {
+    width: var(--width-regular);
+}
+
+.width-medium {
+    width: var(--width-medium);
+}
+
+.width-medium-plus {
+    width: var(--width-medium-plus);
+}
+
+.width-wide,
+.wp-block-embed {
+    width: var(--width-wide);
+}
+
+.width-wide-plus {
+    width: var(--width-wide-plus);
+}
+
+.width-full {
+    margin-left: calc(var(--space-l-5xl) * -1);
+    margin-right: calc(var(--space-l-5xl) * -1);
+    max-width: none;
+    width: auto;
+}
+
+.group > * {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(var(--width-regular) + var(--space-l-5xl));
+}
+
+// Max. widths.
+.archive > h1 {
+    max-width: 25ch;
+}
+
+.archive > .archive__description {
+    max-width: 52ch;
+}

@@ -1,0 +1,102 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "custom": {},
+        "border": {
+            "color": false,
+            "radius": false,
+            "style": false,
+            "width": false
+        },
+        "color": {
+            "custom": false,
+            "customGradient": false,
+            "defaultPalette": false,
+            "defaultGradients": false,
+            "duotone": [],
+            "gradients": [],
+            "link": false,
+            "background": true,
+            "palette": []
+        },
+        "spacing": {
+            "margin": false,
+            "padding": false,
+            "units": []
+        },
+        "typography": {
+            "customFontSize": false,
+            "fontStyle": false,
+            "fontWeight": false,
+            "letterSpacing": false,
+            "lineHeight": false,
+            "textDecoration": false,
+            "textTransform": false,
+            "dropCap": false,
+            "fontFamilies": [],
+            "fontSizes": [
+                {
+					"slug": "small",
+					"size": "var(--step--2)",
+					"name": "Small"
+				},
+                {
+					"slug": "h6",
+					"size": "var(--step-0)",
+					"name": "Looks like H6"
+				},
+                {
+					"slug": "h5",
+					"size": "var(--step-1)",
+					"name": "Looks like H5"
+				},
+                {
+					"slug": "h4",
+					"size": "var(--step-2)",
+					"name": "Looks like H4"
+				},
+                {
+					"slug": "h3",
+					"size": "var(--step-3)",
+					"name": "Looks like H3"
+				},
+                {
+					"slug": "h2",
+					"size": "var(--step-4)",
+					"name": "Looks like H2"
+				},
+                {
+					"slug": "h1",
+					"size": "var(--step-5)",
+					"name": "Looks like H1"
+				}
+            ]
+        },
+        "blocks": {
+            "meomblocks/group": {
+                "color": {
+                    "palette": [
+                        {
+                            "slug": "light",
+                            "color": "var(--color-primary-100)",
+                            "name": "Light"
+                        }
+                    ]
+                }
+            },
+            "core/button": {
+                "border": {
+                    "radius": false
+                },
+                "color": {
+                    "text": false,
+                    "background": false
+                },
+                "spacing": {
+                    "width": false
+                }
+            }
+        }
+    }
+}

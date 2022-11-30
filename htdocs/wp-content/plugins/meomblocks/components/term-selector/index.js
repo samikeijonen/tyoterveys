@@ -12,19 +12,13 @@ const { SelectControl, Spinner } = wp.components;
  */
 function TermSelector(props) {
     const {
-        attributes: { postType, termId },
+        attributes: { termId },
         setAttributes,
     } = props;
     const options = [];
 
-    // Set correct taxonomy based on post type.
-    let taxonomy = 'category';
-    if (postType === 'reference') {
-        taxonomy = 'reference_category';
-    }
-    if (postType === 'professional') {
-        taxonomy = 'professional_category';
-    }
+    // Set correct taxonomy.
+    const taxonomy = props.taxonomyName;
 
     const [terms, isLoading, invalidateRequest] = useRequestData(
         'taxonomy',
@@ -33,7 +27,7 @@ function TermSelector(props) {
 
     options.push({
         value: 0,
-        label: __('From all categories', 'meomblocks'),
+        label: __('Kaikista kategorioista', 'meomblocks'),
     });
 
     if (!isLoading && terms && terms.length > 0) {
@@ -52,7 +46,7 @@ function TermSelector(props) {
             {!isLoading && (
                 <>
                     <SelectControl
-                        label={__('Select category', 'meomblocks')}
+                        label={__('Valitse kategoria', 'meomblocks')}
                         options={options}
                         onChange={(newTermId) => {
                             setAttributes({ termId: newTermId });
@@ -65,7 +59,7 @@ function TermSelector(props) {
                         type="button"
                         onClick={invalidateRequest}
                     >
-                        {__('Refresh category list', 'meomblocks')}
+                        {__('Päivitä kategorialista', 'meomblocks')}
                     </button>
                 </>
             )}

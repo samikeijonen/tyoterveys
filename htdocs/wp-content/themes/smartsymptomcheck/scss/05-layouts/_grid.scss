@@ -1,0 +1,13 @@
+.grid-auto {
+    display: grid;
+    gap: var(--space-2xl);
+    grid-template-columns: repeat(var(--auto-fit-or-fill), minmax(min(100%, 24rem), 1fr));
+}
+
+.has-4-columns {
+    grid-template-columns: repeat(var(--auto-fit-or-fill), minmax(min(100%, 20rem), 1fr));
+}
+
+.has-smaller-spacing {
+    gap: var(--space-xl-2xl) var(--space-2xl);
+}

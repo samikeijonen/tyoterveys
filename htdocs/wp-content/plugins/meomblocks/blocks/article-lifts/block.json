@@ -1,0 +1,9 @@
+{
+    "apiVersion": 2,
+    "name": "meomblocks/article-lifts",
+    "title": "Article lifts",
+    "category": "meomblocks",
+    "icon": "list-view",
+    "keywords": ["article", "insights"],
+    "attributes": {}
+}

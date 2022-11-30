@@ -1,0 +1,27 @@
+.btn,
+.wp-block-button__link,
+input[type="submit"] {
+    -webkit-appearance: none;
+    background-color: var(--color-scheme);
+    border: 0;
+    border-radius: 0.25em;
+    color: var(--color-button);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height-heading);
+    padding: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all var(--transition-2);
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        background-color: var(--color-black);
+        color: var(--color-white);
+    }
+}

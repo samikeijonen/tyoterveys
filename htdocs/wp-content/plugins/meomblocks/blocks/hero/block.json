@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "meomblocks/hero",
+	"title": "Hero",
+	"category": "meomblocks",
+	"icon": "align-pull-right",
+	"description": "Hero element with image background.",
+	"keywords": [ "hero", "header" ],
+	"textdomain": "meomblocks",
+	"attributes": {
+		"image": {
+			"type": "object"
+		}
+	}
+}

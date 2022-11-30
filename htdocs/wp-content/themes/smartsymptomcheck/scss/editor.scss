@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+# Settings - Global variables, config switches.
+--------------------------------------------------------------*/
+@import "01-settings/settings-sass";
+@import "01-settings/settings";
+@import "01-settings/fonts";
+@import "01-settings/color-scheme";
+
+
+/*--------------------------------------------------------------
+# Tools - Default mixins and functions.
+--------------------------------------------------------------*/
+@import "02-tools/mixin";
+
+body .editor-styles-wrapper {
+    color: var(--color-black);
+    font-family: var(--font-sans-serif);
+    font-size: var(--step-0);
+    line-height: var(--line-height-body);
+    padding-left: var(--space-s-4xl);
+    padding-right: var(--space-s-4xl);
+
+    /*--------------------------------------------------------------
+    # Elements - Unclassed HTML elements (type selectors).
+    --------------------------------------------------------------*/
+    // Let typography be the first so other can inherit from that.
+    @import "04-elements/typography";
+    @import "04-elements/button";
+    @import "04-elements/list";
+    @import "04-elements/media";
+    @import "04-elements/table";
+
+
+    /*--------------------------------------------------------------
+    # Layout - Undecorated design patterns.
+    --------------------------------------------------------------*/
+    @import "05-layouts/animations";
+    @import "05-layouts/content-area";
+    @import "05-layouts/grid";
+    @import "05-layouts/reset-list";
+    @import "05-layouts/spacing";
+    @import "05-layouts/widths";
+
+
+    /*--------------------------------------------------------------
+    # Modules - specific UI components.
+    --------------------------------------------------------------*/
+    @import "06-modules/core-blocks";
+    @import "06-modules/archive";
+    @import "06-modules/entry-meta";
+    @import "06-modules/gravityforms";
+    @import "06-modules/hero";
+    @import "06-modules/people-item";
+    @import "06-modules/post-item";
+
+
+    /*--------------------------------------------------------------
+    # Utilities - Helpers and overrides.
+    --------------------------------------------------------------*/
+    @import "07-utilities/alignments";
+    @import "07-utilities/cover";
+    @import "07-utilities/layout";
+    @import "07-utilities/media";
+}
+
+
+/* Editor extra styles. */
+.is-root-container > * {
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--width-regular);
+}
+
+// Some select-fields in the sidebar are height: 100%, I don't know why.
+.components-flex.components-select-control {
+    height: auto;
+}
+
+.components-placeholder {
+    z-index: 100;
+}
+
+// Media and buttons.
+.wp-block[data-type^="meomblocks"] .meom-media-button {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+
+// Add border and title to reusable blocks to make them stand out from regular blocks.
+.is-reusable {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: 1px dashed var(--color-grey-500);
+    border-bottom: 1px dashed var(--color-grey-500);
+
+    &::before {
+        background-color: var(--color-grey-500);
+        position: absolute;
+        padding: 0 0.25rem;
+        content: attr(data-title);
+    }
+}

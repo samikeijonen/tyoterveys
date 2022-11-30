@@ -1,0 +1,23 @@
+.size-debugger {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-black);
+    min-width: 70px;
+    text-align: center;
+    padding: 0.5rem;
+    text-transform: capitalize;
+
+    &::after {
+        content: "default";
+        color: var(--color-black);
+    }
+
+    @each $name, $size in $breakpoints {
+        @include media(#{$name}) {
+            &::after {
+                content: "#{$name}";
+            }
+        }
+    }
+}

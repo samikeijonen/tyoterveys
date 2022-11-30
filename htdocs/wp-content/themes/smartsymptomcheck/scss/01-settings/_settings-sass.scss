@@ -1,0 +1,8 @@
+$breakpoints: (
+    max: var(--max-width-160),
+    large: var(--max-width-wide),
+    navigation: 60rem,
+    medium-large: 55rem,
+    medium: 48rem,
+    small: 26rem
+);

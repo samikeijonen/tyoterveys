@@ -1,7 +1,7 @@
 // Project settings, update if needed.
 const projectSettings = {
     projectURL: 'https://tyoterveys.local',
-    themePath: './themes/tyoterveys/',
+    themePath: './themes/smartsymptomcheck/',
 };
 
 // Project variables, do not update.

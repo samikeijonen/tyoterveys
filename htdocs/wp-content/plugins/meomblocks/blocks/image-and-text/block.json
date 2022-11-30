@@ -1,0 +1,18 @@
+{
+	"apiVersion": 2,
+	"name": "meomblocks/image-and-text",
+	"title": "Image & text",
+	"category": "meomblocks",
+	"icon": "align-pull-right",
+	"keywords": [ "image", "text" ],
+	"textdomain": "meomblocks",
+	"attributes": {
+		"imagePosition": {
+			"type": "string",
+			"default": "left"
+		},
+		"image": {
+			"type": "object"
+		}
+	}
+}

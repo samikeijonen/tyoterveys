@@ -1,0 +1,211 @@
+.site-nav {
+    @include media(navigation) {
+        width: 100%;
+    }
+}
+
+.site-nav__items,
+.site-nav__items ul {
+    @include reset-list();
+}
+
+.site-nav__items,
+.site-nav__items .sub-menu {
+    @include media(navigation) {
+        display: none;
+
+        &.is-opened {
+            display: block;
+        }
+    }
+}
+
+.site-nav__items {
+    @include media(navigation) {
+        text-align: center;
+
+        &.is-opened {
+            background-color: var(--color-primary);
+            bottom: 0;
+            left: 0;
+            min-height: 100vh;
+            overflow-x: auto;
+            padding: 8rem 1rem 2rem;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+    }
+
+    @include media-min(navigation) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
+
+.menu-item {
+    position: relative;
+}
+
+// Similar look for button as for menu anchor.
+.menu-anchor--main,
+.site-nav__sub-toggle {
+    color: var(--color-white);
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: var(--color-white);
+        text-decoration: underline;
+    }
+}
+
+.menu-anchor--main {
+    display: block;
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+
+    &:focus {
+        outline-color: var(--color-white);
+    }
+
+    @include media(navigation) {
+        padding: 0.75rem;
+    }
+}
+
+.has-no-hero .menu-anchor--main {
+    @include media-min(navigation) {
+        color: var(--color-black);
+    }
+}
+
+.site-nav__sub-toggle,
+.site-nav__sub-sub-toggle {
+    background-color: transparent;
+    border: 0;
+    padding: 0.25rem;
+
+    svg {
+        fill: currentColor;
+        display: inline-block;
+        pointer-events: none;
+        position: relative;
+        top: -0.0625em;
+        transition: transform 0.2s;
+        vertical-align: middle;
+    }
+
+    &[aria-expanded="true"] svg {
+        transform: rotate(-180deg);
+    }
+}
+
+.menu-item a[hidden] {
+    display: none;
+}
+
+.lang-item {
+    @include media-min(navigation) {
+        border-left: 1px solid var(--color-primary-100);
+        padding-left: 1.5rem;
+    }
+}
+
+a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+.site-nav__toggle {
+    background-color: transparent;
+    border: 0;
+    padding: 0.75rem;
+    position: relative;
+    width: 2.75rem;
+    height: 2.75rem;
+    z-index: 110;
+
+    &[aria-expanded="true"] {
+        color: var(--color-white);
+    }
+
+    @include media-min(navigation) {
+        display: none;
+    }
+}
+
+.site-nav__toggle-box {
+    display: block;
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+
+.site-nav__toggle-box-inner,
+.site-nav__toggle-box-inner::after,
+.site-nav__toggle-box-inner::before {
+    background-color: var(--color-white);
+    display: block;
+    height: 0.15625rem;
+    position: absolute;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: ease;
+    width: 24px;
+}
+
+.has-no-hero .site-nav__toggle-box-inner,
+.has-no-hero .site-nav__toggle-box-inner::after,
+.has-no-hero .site-nav__toggle-box-inner::before {
+    background-color: var(--color-black);
+}
+
+.site-nav__toggle-box-inner {
+    display: block;
+    margin-top: -2px;
+    top: 50%;
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.site-nav__toggle-box-inner::after,
+.site-nav__toggle-box-inner::before {
+    content: "";
+}
+
+.site-nav__toggle-box-inner::before {
+    top: -7px;
+    transition: top 0.075s ease 0.2s, opacity 0.075s ease;
+}
+
+.site-nav__toggle-box-inner::after {
+    bottom: -7px;
+    transition: bottom 0.075s ease 0.2s, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner {
+    background-color: var(--color-white);
+    transform: rotate(45deg);
+    transition-delay: 0.2s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner::before {
+    background-color: var(--color-white);
+    opacity: 0;
+    top: 0;
+    transition: top 0.075s ease, opacity 0.075s ease 0.2s;
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner::after {
+    background-color: var(--color-white);
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}

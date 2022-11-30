@@ -1,0 +1,142 @@
+// Buttons.
+.wp-block-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &.is-vertical {
+        flex-direction: column;
+    }
+
+    &.is-content-justification-left {
+        justify-content: flex-start;
+
+        &.is-vertical {
+            align-items: flex-start;
+        }
+    }
+
+    &.is-content-justification-center {
+        justify-content: center;
+
+        &.is-vertical {
+            align-items: center;
+        }
+    }
+
+    &.is-content-justification-right {
+        justify-content: flex-end;
+    }
+}
+
+// Embeds.
+.wp-has-aspect-ratio .wp-block-embed__wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+
+    iframe {
+        height: 100%;
+        left: 0;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+// Core Image block.
+.wp-block-image {
+    .alignleft {
+        float: none;
+        margin-right: 0;
+        @include media-min(medium) {
+            float: left;
+            margin-right: var(--space-m);
+        }
+    }
+
+    .alignright {
+        float: none;
+        margin-left: 0;
+        @include media-min(medium) {
+            float: right;
+            margin-left: var(--space-m);
+        }
+    }
+
+    figcaption {
+        color: inherit;
+        text-align: center;
+    }
+
+    &.is-style-rounded img {
+        // We use an absolute pixel to prevent the oval shape that a value of 50% would give
+        // to rectangular images. A pill-shape is better than otherwise.
+        border-radius: 999em;
+    }
+}
+
+// Separator block.
+.wp-block-separator,
+hr {
+    background-color: var(--color-grey-500);
+    border: 0;
+    height: 0.0625rem;
+}
+
+// Blockquote block.
+.wp-block-quote,
+blockquote {
+    border-bottom: 1px solid var(--color-grey-500);
+    border-top: 1px solid var(--color-grey-500);
+    font-weight: 600;
+    padding-bottom: var(--space-4xl);
+    padding-top: var(--space-4xl);
+    text-align: center;
+    width: var(--width-wide);
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;
+        width: var(--width-medium);
+    }
+
+    p {
+        color: var(--color-primary);
+        font-size: var(--step-3);
+        line-height: var(--line-height-heading);
+    }
+
+    cite,
+    // Editor only have this class, not <cite> markup.
+    .wp-block-quote__citation {
+        display: block;
+        font-size: var(--step--2);
+        font-style: normal;
+        letter-spacing: var(--letter-spacing);
+        margin-top: var(--space-l);
+        text-transform: uppercase;
+    }
+}
+
+// Table block.
+.has-fixed-layout {
+    table-layout: fixed;
+}
+
+// Gallery.
+// We need spesificity because of Core inline styles :(
+.wp-block-gallery.wp-block-gallery.wp-block-gallery {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+}
+
+// Paragraph.
+.is-style-ingress {
+    font-size: var(--step-1);
+    font-weight: 600;
+}

@@ -2,10 +2,9 @@ const { withSelect } = wp.data;
 
 const FeaturedImageRenderProps = ({ children, featuredImage }) => {
     if (!featuredImage) return <></>;
-    console.log('featuredImage', featuredImage);
 
     if (!children) {
-        return <img src={featuredImage.source_url} />;
+        return <img src={featuredImage.source_url} alt="" />;
     }
 
     return <>{children(featuredImage)}</>;
