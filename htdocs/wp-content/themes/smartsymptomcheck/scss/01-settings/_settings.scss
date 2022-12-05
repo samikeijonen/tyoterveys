@@ -58,24 +58,21 @@
 
     /* Colors.
      *
-     * @link: https://nordhealth.design/color-generator/?theme=nord&gray=true&hues=12&shades=6&lightness=0.5
+     * @link: https://nordhealth.design/color-generator/?theme=nord&gray=true&hues=12&shades=5&lightness=0.6
      */
-    --color-primary-700: #5734c1;
-    --color-primary-600: #5734c1;
-    --color-primary-500: #927ada;
-    --color-primary-400: #b4a3e6;
-    --color-primary-300: #cec3ee;
-    --color-primary-200: #e4ddf6;
-    --color-primary-100: #f6f4fc;
+    --color-primary-400: #3559c7;
+    --color-primary-300: #8ba0df;
+    --color-primary-200: #c0cbed;
+    --color-primary-100: #e8ecf9;
 
-    --color-primary: var(--color-primary-700);
+    --color-primary: var(--color-primary-400);
 
     --color-deep-canary: #f5aa0c;
     --color-jade-green: #3b6344;
     --color-colorful-tangerine: #ef7511;
     --color-dark-grey-green: #1f3f42;
 
-    --color-grey-500: #dfe1e5;
+    --color-grey-500: #ebecef;
 
     --color-black: #111;
     --color-white: #fff;

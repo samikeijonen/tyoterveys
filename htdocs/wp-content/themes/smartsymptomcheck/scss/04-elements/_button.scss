@@ -2,10 +2,10 @@
 .wp-block-button__link,
 input[type="submit"] {
     -webkit-appearance: none;
-    background-color: var(--color-scheme);
+    background-color: var(--color-primary);
     border: 0;
     border-radius: 0.25em;
-    color: var(--color-button);
+    color: var(--color-white);
     cursor: pointer;
     display: inline-flex;
     font-size: var(--step--1);
@@ -19,8 +19,7 @@ input[type="submit"] {
 
     &:hover,
     &:active,
-    &:focus,
-    &:visited {
+    &:focus {
         background-color: var(--color-black);
         color: var(--color-white);
     }

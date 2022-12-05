@@ -1,10 +1,10 @@
 .hero {
-    background-color: var(--color-primary-700);
+    background-color: var(--color-primary);
     color: var(--color-white);
     position: relative;
 
     &::before {
-        background-color: var(--color-primary-700);
+        background-color: var(--color-primary);
         bottom: 0;
         content: "";
         height: 100%;

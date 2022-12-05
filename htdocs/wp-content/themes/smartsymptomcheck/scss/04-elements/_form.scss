@@ -14,7 +14,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-    border: 2px solid var(--color-scheme);
+    border: 2px solid var(--color-primary);
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 1rem;
     padding: var(--space-xs);
@@ -24,7 +24,7 @@ textarea {
 select {
     line-height: 1.5;
     // appearance: none;
-    border: 1px solid var(--color-scheme);
+    border: 1px solid var(--color-primary);
     padding: var(--space-s);
     width: 100%;
     border-radius: 0;
