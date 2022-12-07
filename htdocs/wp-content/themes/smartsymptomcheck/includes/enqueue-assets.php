@@ -78,6 +78,7 @@ add_action( 'wp_head', 'Kala\js_detection', 0 );
 function preload_fonts() {
     $fonts = [
         THEME_URI . '/fonts/poppins-v20-latin-700.woff2' => 'woff2',
+        THEME_URI . '/fonts/poppins-v20-latin-600.woff2' => 'woff2',
         THEME_URI . '/fonts/poppins-v20-latin-regular.woff2' => 'woff2',
     ];
 

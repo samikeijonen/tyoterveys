@@ -9,10 +9,10 @@ input[type="submit"] {
     cursor: pointer;
     display: inline-flex;
     font-size: var(--step--1);
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: var(--letter-spacing);
     line-height: var(--line-height-heading);
-    padding: 1.2em;
+    padding: 1.2em 1.4em;
     text-decoration: none;
     text-transform: uppercase;
     transition: all var(--transition-2);
