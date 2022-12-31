@@ -49,8 +49,6 @@
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/so-clean-up-wp-seo": "*",
     "wpackagist-plugin/regenerate-thumbnails": "*",
-    "wpackagist-plugin/kraken-image-optimizer": "*",
-    "meom/meom-dodo": "^1.0",
     "meom/meom-3rd-party-scripts": "*"
   },
   "require-dev": {
